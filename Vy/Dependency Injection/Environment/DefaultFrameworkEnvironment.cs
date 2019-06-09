@@ -18,6 +18,9 @@ namespace Vy
         /// </summary>
         public bool IsDevelopment => Assembly.GetEntryAssembly()?.GetCustomAttribute<DebuggableAttribute>()?.IsJITTrackingEnabled == true;
 
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public DefaultFrameworkEnvironment() { }
     }
 }

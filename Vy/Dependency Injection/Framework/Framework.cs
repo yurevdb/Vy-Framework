@@ -13,8 +13,16 @@ namespace Vy
         /// </summary>
         public static FrameworkConstruction Construction { get; private set; }
         
+        /// <summary>
+        /// 
+        /// </summary>
         public static IServiceProvider Provider => Construction.Provider;
         
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public static FrameworkConstruction Construct<T>()
             where T : FrameworkConstruction, new()
         {
@@ -23,6 +31,12 @@ namespace Vy
             return Construction;
         }
         
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="constructionInstance"></param>
+        /// <returns></returns>
         public static FrameworkConstruction Construct<T>(T constructionInstance)
             where T : FrameworkConstruction
         {
@@ -31,7 +45,11 @@ namespace Vy
             return Construction;
         }
 
-        public static T Service<T>() =>
-            Provider.GetService<T>();
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static T Service<T>() => Provider.GetService<T>();
     }
 }

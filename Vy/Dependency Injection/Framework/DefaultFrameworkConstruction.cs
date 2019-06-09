@@ -5,6 +5,9 @@
     /// </summary>
     public class DefaultFrameworkConstruction : FrameworkConstruction
     {
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public DefaultFrameworkConstruction() { }
     }
 }
