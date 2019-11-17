@@ -9,17 +9,17 @@ namespace Vy
     public static class Framework
     {
         /// <summary>
-        /// 
+        /// Gets the base <see cref="FrameworkConstruction"/> for the <see cref="Framework"/>
         /// </summary>
         public static FrameworkConstruction Construction { get; private set; }
         
         /// <summary>
-        /// 
+        /// Gets the <see cref="IServiceProvider"/> of the <see cref="Framework"/>
         /// </summary>
         public static IServiceProvider Provider => Construction.Provider;
         
         /// <summary>
-        /// 
+        /// Default constructor
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
@@ -32,7 +32,7 @@ namespace Vy
         }
         
         /// <summary>
-        /// 
+        /// parameterized constructor
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="constructionInstance"></param>
@@ -46,9 +46,9 @@ namespace Vy
         }
 
         /// <summary>
-        /// 
+        /// Get the specified service
         /// </summary>
-        /// <typeparam name="T"></typeparam>
+        /// <typeparam name="T">The service to get</typeparam>
         /// <returns></returns>
         public static T Service<T>() => Provider.GetService<T>();
     }

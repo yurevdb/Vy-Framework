@@ -9,6 +9,8 @@ namespace Vy
 {
     public static class FrameworkExtensions
     {
+        #region Logging
+
         /// <summary>
         /// Adds a default logger to the <see cref="Framework"/>
         /// </summary>
@@ -27,6 +29,8 @@ namespace Vy
             // Return construction for chaining
             return construction;
         }
+
+        #endregion
 
         #region Configuration
 

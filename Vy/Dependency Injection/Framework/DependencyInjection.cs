@@ -3,6 +3,9 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Vy
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class FrameworkDI
     {
         /// <summary>

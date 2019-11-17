@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vy.ML</name>
+    </assembly>
+    <members>
+        <member name="T:Vy.ML.Input">
+            <summary>
+            Defines an input to a <see cref="T:Vy.ML.Neuron"/>
+            </summary>
+        </member>
+        <member name="P:Vy.ML.Input.Value">
+            <summary>
+            Gets or sets the value of the input
+            </summary>
+        </member>
+        <member name="P:Vy.ML.Input.Weight">
+            <summary>
+            Gets or sets the wight of the input
+            </summary>
+        </member>
+        <member name="M:Vy.ML.Input.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Vy.ML.Input.#ctor(System.Double)">
+            <summary>
+            Default parameterized constructor
+            </summary>
+            <param name="Value"></param>
+        </member>
+        <member name="T:Vy.ML.Neuron">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Vy.ML.Neuron.Bias">
+            <summary>
+            Gets or sets the bias of the neuron
+            </summary>
+        </member>
+        <member name="P:Vy.ML.Neuron.Activation">
+            <summary>
+            Gets or sets the 
+            </summary>
+        </member>
+        <member name="P:Vy.ML.Neuron.Inputs">
+            <summary>
+            Gets or sets the inputs for the neuron
+            </summary>
+        </member>
+        <member name="P:Vy.ML.Neuron.Output">
+            <summary>
+            Gets the output of the neuron
+            </summary>
+        </member>
+        <member name="M:Vy.ML.Neuron.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:Vy.ML.Neuron.#ctor(System.Collections.Generic.List{Vy.ML.Input})">
+            <summary>
+            Default parameterized constructor
+            </summary>
+            <param name="inputs"></param>
+        </member>
+        <member name="M:Vy.ML.Neuron.Init">
+            <summary>
+            Initializes the neuron with default values
+            </summary>
+        </member>
+        <member name="M:Vy.ML.Neuron.InputSum(System.Collections.Generic.List{Vy.ML.Input},System.Double)">
+            <summary>
+            
+            </summary>
+            <param name="inputs"></param>
+            <param name="bias"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Vy.ML.Output">
+            <summary>
+            Defines an output for a <see cref="T:Vy.ML.Neuron"/>
+            </summary>
+        </member>
+        <member name="P:Vy.ML.Output.Value">
+            <summary>
+            Gets or sets the value of the input
+            </summary>
+        </member>
+        <member name="P:Vy.ML.Output.Weight">
+            <summary>
+            Gets or sets the wight of the input
+            </summary>
+        </member>
+        <member name="M:Vy.ML.Output.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Vy.ML.Output.#ctor(System.Double)">
+            <summary>
+            Default parameterized constructor
+            </summary>
+            <param name="Value"></param>
+        </member>
+    </members>
+</doc>

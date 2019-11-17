@@ -7,7 +7,7 @@ namespace Vy
     /// <summary>
     /// 
     /// </summary>
-    public static class MethodExtensions
+    internal static class MethodExtensions
     {
         /// <summary>
         /// Handles a given <see cref="Action"/>

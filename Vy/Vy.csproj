@@ -6,14 +6,18 @@
     <Authors>Yuré Vanderbruggen</Authors>
     <Company />
     <Product />
-    <AssemblyVersion>1.0.3.0</AssemblyVersion>
-    <FileVersion>1.0.3.0</FileVersion>
-    <Version>1.0.3</Version>
+    <AssemblyVersion>1.0.5.0</AssemblyVersion>
+    <FileVersion>1.0.5.0</FileVersion>
+    <Version>1.0.5</Version>
     <Description>Personal Framework with all the useful things I use for most projects.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <PackageReleaseNotes></PackageReleaseNotes>
+    <PackageReleaseNotes>Added licensing and comments</PackageReleaseNotes>
     <PackageTags>Dependency Injection</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Src\Framework\Vy\Vy\Vy.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vy</name>
+    </assembly>
+    <members>
+        <member name="T:Vy.DefaultFrameworkEnvironment">
+            <summary>
+            Environment variables useful throughout the application
+            </summary>
+        </member>
+        <member name="P:Vy.DefaultFrameworkEnvironment.Configuration">
+            <summary>
+            Gets in wich configuration the application is running
+            </summary>
+        </member>
+        <member name="P:Vy.DefaultFrameworkEnvironment.IsDevelopment">
+            <summary>
+            Get wether the application is running in <see cref="T:System.Diagnostics.Debug"/> mode or not
+            </summary>
+        </member>
+        <member name="M:Vy.DefaultFrameworkEnvironment.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="T:Vy.DefaultFrameworkConstruction">
+            <summary>
+            A default <see cref="T:Vy.FrameworkConstruction"/> that has no implementation
+            </summary>
+        </member>
+        <member name="M:Vy.DefaultFrameworkConstruction.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="T:Vy.FrameworkDI">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Vy.FrameworkDI.Configuration">
+            <summary>
+            Gets the configuration
+            </summary>
+        </member>
+        <member name="T:Vy.Framework">
+            <summary>
+            The Dependency Injection entry point for the application
+            </summary>
+        </member>
+        <member name="P:Vy.Framework.Construction">
+            <summary>
+            Gets the base <see cref="T:Vy.FrameworkConstruction"/> for the <see cref="T:Vy.Framework"/>
+            </summary>
+        </member>
+        <member name="P:Vy.Framework.Provider">
+            <summary>
+            Gets the <see cref="T:System.IServiceProvider"/> of the <see cref="T:Vy.Framework"/>
+            </summary>
+        </member>
+        <member name="M:Vy.Framework.Construct``1">
+            <summary>
+            Default constructor
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:Vy.Framework.Construct``1(``0)">
+            <summary>
+            parameterized constructor
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="constructionInstance"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vy.Framework.Service``1">
+            <summary>
+            Get the specified service
+            </summary>
+            <typeparam name="T">The service to get</typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Vy.FrameworkConstruction">
+            <summary>
+            The base dependency injection construction based on the base .net dependency injection model
+            </summary>
+        </member>
+        <member name="P:Vy.FrameworkConstruction.Provider">
+            <summary>
+            Gets the <see cref="T:System.IServiceProvider"/>
+            </summary>
+        </member>
+        <member name="P:Vy.FrameworkConstruction.Services">
+            <summary>
+            Gets or sets the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>
+            </summary>
+        </member>
+        <member name="P:Vy.FrameworkConstruction.Environment">
+            <summary>
+            Gets the <see cref="T:Vy.IFrameworkEnvironment"/>
+            </summary>
+        </member>
+        <member name="P:Vy.FrameworkConstruction.Configuration">
+            <summary>
+            Gets the <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/>
+            </summary>
+        </member>
+        <member name="M:Vy.FrameworkConstruction.#ctor(System.Boolean)">
+            <summary>
+            Default constructor
+            </summary>
+            <param name="createServicecollection"></param>
+        </member>
+        <member name="M:Vy.FrameworkConstruction.Build(System.IServiceProvider)">
+            <summary>
+            Build the <see cref="T:Vy.FrameworkConstruction"/>
+            </summary>
+            <param name="provider"></param>
+        </member>
+        <member name="M:Vy.FrameworkConstruction.UseConfiguration(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Use a specific <see cref="T:Microsoft.Extensions.Configuration.IConfiguration"/> for the <see cref="T:Vy.FrameworkConstruction"/>
+            </summary>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vy.FrameworkExtensions.AddDefaultLogger(Vy.FrameworkConstruction)">
+            <summary>
+            Adds a default logger to the <see cref="T:Vy.Framework"/>
+            </summary>
+            <param name="construction"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Vy.FrameworkExtensions.AddDefaultConfiguration(Vy.FrameworkConstruction,System.Action{Microsoft.Extensions.Configuration.IConfigurationBuilder})">
+            <summary>
+            Adds a default configuration
+            </summary>
+            <param name="construction"></param>
+            <param name="configure"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Vy.MethodExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Vy.MethodExtensions.Handle(System.Delegate)">
+            <summary>
+            Handles a given <see cref="T:System.Action"/>
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="T:Vy.Timer">
+            <summary>
+            A timer based on the <see cref="!:StopWatch"/> from <see cref="N:System.Diagnostics"/> but with the useful features of the <see cref="T:System.Timers.Timer"/>.
+            </summary>
+        </member>
+        <member name="F:Vy.Timer._StopWatch">
+            <summary>
+            The timer to use
+            </summary>
+        </member>
+        <member name="F:Vy.Timer._IsRunning">
+            <summary>
+            Boolean to represent wether the <see cref="T:Vy.Timer"/> has been started or not.
+            </summary>
+        </member>
+        <member name="F:Vy.Timer._InfiniteRun">
+            <summary>
+            The infinitely running <see cref="T:System.Threading.Tasks.Task"/>
+            </summary>
+        </member>
+        <member name="E:Vy.Timer.Elapsed">
+            <summary>
+            The event to signal that the interval has been passed
+            </summary>
+        </member>
+        <member name="P:Vy.Timer.Interval">
+            <summary>
+            Gets or sets the interval in milliseconds for the <see cref="T:Vy.Timer"/> to raise the <see cref="E:Vy.Timer.Elapsed"/> event.
+            </summary>
+        </member>
+        <member name="P:Vy.Timer.ElapsedTime">
+            <summary>
+            Gets the elepsed time from the <see cref="T:Vy.Timer"/>.
+            </summary>
+        </member>
+        <member name="M:Vy.Timer.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:Vy.Timer.Start">
+            <summary>
+            Starts the <see cref="T:Vy.Timer"/>.
+            </summary>
+        </member>
+        <member name="M:Vy.Timer.Stop">
+            <summary>
+            Stops the <see cref="T:Vy.Timer"/>.
+            </summary>
+        </member>
+        <member name="M:Vy.Timer.Reset">
+            <summary>
+            Resets the <see cref="T:Vy.Timer"/>.
+            </summary>
+        </member>
+        <member name="M:Vy.Timer.Restart">
+            <summary>
+            Restarts the <see cref="T:Vy.Timer"/>.
+            </summary>
+        </member>
+        <member name="M:Vy.Timer.Run">
+            <summary>
+            Runs an infinite function that will call the <see cref="E:Vy.Timer.Elapsed"/> event when the <see cref="T:Vy.Timer"/> is running and the <see cref="P:System.Diagnostics.Stopwatch.ElapsedMilliseconds"/> are a multiple of the <see cref="P:Vy.Timer.Interval"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Vy.Timer.OnElapsed(System.EventArgs)">
+            <summary>
+            Invokes the <see cref="E:Vy.Timer.Elapsed"/> event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Vy.Timer.Dispose">
+            <summary>
+            Disposes the current <see cref="T:Vy.Timer"/>.
+            </summary>
+        </member>
+    </members>
+</doc>
