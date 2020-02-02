@@ -151,6 +151,112 @@
             </summary>
             <param name="action"></param>
         </member>
+        <member name="T:Vy.TaskEngine">
+            <summary>
+            An engine to run task and manage the lifetime of those tasks.
+            </summary>
+        </member>
+        <member name="F:Vy.TaskEngine.mTaskList">
+            <summary>
+            The local list of all tasks managed by the <see cref="T:Vy.TaskEngine"/>
+            </summary>
+        </member>
+        <member name="F:Vy.TaskEngine.mCancellationTokenSource">
+            <summary>
+            The local <see cref="T:System.Threading.CancellationTokenSource"/> to enable cancellation for any <see cref="T:System.Threading.Tasks.Task"/> created without a specified <see cref="T:System.Threading.CancellationToken"/>
+            </summary>
+        </member>
+        <member name="F:Vy.TaskEngine.mCancellationToken">
+            <summary>
+            The local <see cref="T:System.Threading.CancellationToken"/> used for cancellation of all <see cref="T:System.Threading.Tasks.Task"/>s
+            </summary>
+        </member>
+        <member name="P:Vy.TaskEngine.Tasks">
+            <summary>
+            Gets the collection of tasks managed by the <see cref="T:Vy.TaskEngine"/>
+            </summary>
+        </member>
+        <member name="P:Vy.TaskEngine.InProgress">
+            <summary>
+            Gets wether or not any <see cref="T:System.Threading.Tasks.Task"/> is still in progress of being executed
+            </summary>
+        </member>
+        <member name="M:Vy.TaskEngine.Run(System.Action)">
+            <summary>
+            Start a <see cref="T:System.Threading.Tasks.Task"/>
+            </summary>
+            <param name="action">The <see cref="T:System.Action"/> to execute</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vy.TaskEngine.Run(System.String,System.Action)">
+            <summary>
+            Start a <see cref="T:System.Threading.Tasks.Task"/>
+            </summary>
+            <param name="action">The <see cref="T:System.Action"/> to execute</param>
+            <param name="key">The key for the task</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vy.TaskEngine.Run(System.String,System.Action,System.Threading.CancellationToken)">
+            <summary>
+            Start a <see cref="T:System.Threading.Tasks.Task"/>
+            </summary>
+            <param name="action">The <see cref="T:System.Action"/> to execute</param>
+            <param name="key">The key for the task</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to create a custom cancellation point for the <see cref="T:System.Action"/> provided</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vy.TaskEngine.Run``1(System.Func{``0})">
+            <summary>
+            Starts a <see cref="T:System.Threading.Tasks.Task`1"/>
+            </summary>
+            <typeparam name="T">The return type of the <see cref="T:System.Threading.Tasks.Task"/></typeparam>
+            <param name="func">The <see cref="T:System.Func`2"/> to execute</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vy.TaskEngine.Run``1(System.String,System.Func{``0})">
+            <summary>
+            Starts a <see cref="T:System.Threading.Tasks.Task`1"/>
+            </summary>
+            <typeparam name="T">The return type of the <see cref="T:System.Threading.Tasks.Task"/></typeparam>
+            <param name="func">The <see cref="T:System.Func`2"/> to execute</param>
+            <param name="key">The key for the task</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vy.TaskEngine.Run``1(System.String,System.Func{``0},System.Threading.CancellationToken)">
+            <summary>
+            Starts a <see cref="T:System.Threading.Tasks.Task`1"/>
+            </summary>
+            <typeparam name="T">The return type of the <see cref="T:System.Threading.Tasks.Task"/></typeparam>
+            <param name="func">The <see cref="T:System.Func`2"/> to execute</param>
+            <param name="key">The key for the task</param>
+            <param name="cancellationToken">The <see cref="T:System.Threading.CancellationToken"/> to create a custom cancellation point for the <see cref="T:System.Action"/> provided</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vy.TaskEngine.WaitAll">
+            <summary>
+            Waits for all <see cref="T:System.Threading.Tasks.Task"/>s in the <see cref="P:Vy.TaskEngine.Tasks"/> to be completed or cancelled
+            </summary>
+        </member>
+        <member name="M:Vy.TaskEngine.CancelAll">
+            <summary>
+            Cancels all future execution of <see cref="T:System.Threading.Tasks.Task"/>s in the <see cref="P:Vy.TaskEngine.Tasks"/>
+            </summary>
+        </member>
+        <member name="M:Vy.TaskEngine.GetTask(System.String)">
+            <summary>
+            Gets the <see cref="T:System.Threading.Tasks.Task"/> from the <see cref="P:Vy.TaskEngine.Tasks"/>
+            </summary>
+            <param name="key">The key of the <see cref="T:System.Threading.Tasks.Task"/> to get</param>
+            <returns></returns>
+        </member>
+        <member name="M:Vy.TaskEngine.GetTask``1(System.String)">
+            <summary>
+            Gets the <see cref="T:System.Threading.Tasks.Task`1"/> from the <see cref="P:Vy.TaskEngine.Tasks"/>
+            </summary>
+            <typeparam name="T">The return type of the <see cref="T:System.Threading.Tasks.Task"/> to get</typeparam>
+            <param name="key">The key of the <see cref="T:System.Threading.Tasks.Task"/> to get</param>
+            <returns></returns>
+        </member>
         <member name="T:Vy.Timer">
             <summary>
             A timer based on the <see cref="!:StopWatch"/> from <see cref="N:System.Diagnostics"/> but with the useful features of the <see cref="T:System.Timers.Timer"/>.

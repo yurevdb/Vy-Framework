@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vy", "Vy\Vy.csproj", "{BB6BDB41-EB85-4DA7-828B-FA9B548A3576}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vy.ML", "Vy.ML\Vy.ML.csproj", "{D809CC24-DBDE-43F7-9DEF-9E3CA41C4256}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Vy.ML", "Vy.ML\Vy.ML.csproj", "{D809CC24-DBDE-43F7-9DEF-9E3CA41C4256}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vy.Sandbox", "Vy.Sandbox\Vy.Sandbox.csproj", "{633F18B0-68A2-4669-A58B-81239AC287C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{D809CC24-DBDE-43F7-9DEF-9E3CA41C4256}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D809CC24-DBDE-43F7-9DEF-9E3CA41C4256}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D809CC24-DBDE-43F7-9DEF-9E3CA41C4256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{633F18B0-68A2-4669-A58B-81239AC287C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{633F18B0-68A2-4669-A58B-81239AC287C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{633F18B0-68A2-4669-A58B-81239AC287C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{633F18B0-68A2-4669-A58B-81239AC287C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
